@@ -7,6 +7,8 @@ $ch = curl_init(API_URL);
 
 // Ahora vamos a indicar que queremos recibir la respuesta y no mostrarla por pantalla.
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+// Se añade useragent para evitar que la API nos devuelva un error 403
+curl_setopt($ch, CURLOPT_USERAGENT, 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)');
 
 /* Ahora ejecutar la petición
 y guardar el resultado */
